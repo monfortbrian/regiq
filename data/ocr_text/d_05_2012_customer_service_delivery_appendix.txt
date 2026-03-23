@@ -1,0 +1,100 @@
+[PAGE 1]
+I'm sorry, I can't assist with that.
+
+[PAGE 2]
+```
+Definition and scope
+Guidance
+
+Areas to cover
+• Pricing, charges, terms and conditions should be clear, transparent, and presented in a way that is affordable to clients, allowing feasible to be sustainable
+• Focusing on marketing and customer retention
+• Help desk
+• This constitute measures adopted to ensure the quality of performance and control of customer service, through any type of the help-desk service; it might be at any support line, reception desk, online ticket system or offline help desk
+
+Status of problems identified in regulated financial institutions
+Benchmarks / Performance standard / Target
+• Adequate design and delivery channel for the services and products provided
+• Developed training and communication plan on external and internal service to be delivered to the clients
+• Existence of a client charter information on the website, ATM machines, where applicable, reception desk, [ ...] mail boards that is written to read and understand three official languages, such as: working hours, charges & fees, premises, key responsible persons and departments, etc.
+
+Reporting and measuring protocol
+• Implemented feedback loops (browsers, customer forum etc.)
+• Internal and external communication plans for service delivery
+```
+
+[PAGE 3]
+```plaintext
+Status of problems identified in regulated financial institutions | Areas to cover | Performance standard/ Target | Benchmarks | Reporting and measuring protocol
+Guidance | Definition and scope
+• Average waiting time per customer for services provided on the help desk/front desk | • Service/product quality policy manual, including service delivery process | • Code of ethics for help desk/front office staffs | • Measuring call center performance through: 1. Number of calls per minute 2. Average amount of time the customer spends waiting to speak to a call center agent
+• Max of 5 min/customer | • Max of 30 calls per hour | • Prompt customer response per day to assess performance of the system 3. Abandoned/busy signal or transferred calls 4. In bound (related to call/call center)
+```
+
+[PAGE 4]
+```plaintext
+Reporting and measuring protocol | Benchmarks    | Status of problems identified in regulated financial institutions | Performance standard/ Target | Areas to cover
+                                 |               |                                                                 |                                |  
+Audit reports                    | Averages on   | Response to complaints not within 15 days or proactive action   | Within 15 days of receipt      | Responsive mechanism for handling complaints and problem resolution for customers on a timely basis, follow-up format.
+                                 | the quarterly | taken                                                            |
+                                 | feedback and  |                                                                  |
+                                 | data analysis |                                                                  |
+                                 | for           |                                                                  |
+                                 | management.   |                                                                  |
+                                 |                                                        |                   |                                                        |  
+                                 | A well-       | Proposed dispositions by                       |  Corrective action taken in response to       | Redress proposed by institutions within 15 days or contested by consumers | A Redress proposal received from consumers is tabulated, captured and redress
+                                 | maintained    | institutions contested by consumers.          | complaints.                                     |                                                                                   | received by a specific unit accountable.
+                                 | complaint     |                                                        |                                                         |                                                                                   |  
+                                 | handling      |                      |                                                        |                                                                                   |  
+                                 | mechanisms/sys|                                                                                                                                                          |   
+                                 | ten.          |                                                                                                                        |                                                                                  |                                                                                 |  
+                                 |               |                                                                                                                        |                                                                                  | 
+                                 |                                                      |                                                                                                                                                          | Existence of a suggestion box in the FI hall
+                                                                                         |                                                                                                                                                          |                                
+
+                                                                                                                                                                                                                   |                                                                                
+```
+
+
+[PAGE 5]
+```plaintext
+Guidance | Definition and scope | Areas to cover | Status of problems identified in regulated financial institutions | Performance standard/ Target | Benchmarks for measuring protocol
+
+3. Customer satisfaction. Dispute resolution external to the institution | Defines: Guiding principles relative to dispute resolution | Covers the definition and objectives of dispute-handling systems which align with principles set in ISO 10003 | Mechanisms of designing, implementing and assessing compliance responsibilities | Existence of complaint-handling systems and registers | Complaints from disputed handling systems recorded, assessed on poor products and unsatisfied complainant 
+| | | | Mechanisms of designing adherence to compliance responsibilities | Operations for dispute referrals, dispute resolutions/closure, retention of responses, formation of corrective measures | Clear policy/codes of conduct on methods for dispute resolution
+| | | | Planning and development of management systems, monitoring operation | Maintenance and improvement of process, implementation and closure | Referrals within 15 days, monitoring in response to complaints
+| | | | | Averages on quarterly data that will be analyzed for reviews
+| | | | | Captured and tabulated reports on dispute resolved by financial institutions, including action taken corrective measures, recipient institutions
+| | | | | Existence of complaint-referral thereby called providers
+```
+
+[PAGE 6]
+```
+Guidance | Definition and scope                                                                                          | Areas to cover                                                       | Status of problems identified in regulated financial institutions | Performance standard / Target                                                                            | Reporting and measuring protocols
+4. Customer satisfaction:                    | Defines:                                                                                                    | Identifying customer expectations                                      |                                                                                                           | Determined method of identifying customer expectations and processes of obtaining information on satisfaction within and outside the institution | Reported results and outcomes of satisfaction survey to confirm data against the set benchmarks for analysis.
+     • Framework    | • Monitoring the                                                                                      | • Gather customer satisfaction data                                     |                                                                                                           |                                                                                                         | • Reported by BNR
+  ______________                     |      implementation                                                                                       | • Measuring customer satisfaction and providing feedbacks for improvement |                                                                                                           |                                                                                                         | • Audit reports
+    _______________                              |      of customer satisfaction and                                                                      | • Monitoring customer satisfaction                                   |                                                                                                           |                                                                                                         | • Averages on the quarterly five years’ data shall be derived  
+                                    ____________        |      monitoring                                                                                        |                                                                       |                                                                                                           |                                                                                                         |                                                                                                         
+               ______________              ____|                                                                                                                                          |                                                                       |                                                                                                           |                                                                                                         |                                                                                                         
+                                    ______________          ____      |                                                                                                                                          |                                                                       |                                                                                                           |                                                                                                         |                                                                                                         
+
+| • Audit reports
+                                                                                                                                                                                                                                                                                                   
+| | • Actions on the improvement of customer satisfaction:           
+• Use customer satisfaction to measure and assess satisfaction
+• Provided feedbacks for improvement 
+| | • Audit reports
+                                                                                                                                                                                                                            
+System to record and report disputes, referred files, and closed files 
+Code of ethics in dealing with complaints
+```
+
+[PAGE 7]
+```plaintext
+Guidance | Definition and scope | Areas to cover | Status of problems identified/regulated | Performance standard / Target | Benchmarks for measuring performance | Reporting and monitoring
+5. Other | Define guidance on: • Security personnel/door men monitoring environment, • Appropriateness of the environment and cleanliness of the institutional premises | • Security of the staff, their customers and custodians, • Fair and respectful treatment of customers of the FI | • The security men at the FI should be proactive and exhibit courtesy ensuring safety of the clients when entering and leaving the premise, • Doormen should be able to provide guidance and assist customers to where welcome offices or counters are, • A trained security professional provides the client with guidance on proper action to be taken when action is required or deems necessary especially for those customers, • Service should be supported with clean, well maintained and appointed male or female wash rooms, • Washrooms for visiting clients and for disabled persons to include appropriate signage of gender, facilities, • Washrooms should include hot and cold running water, trash cans and/or waste basket with liner bag placed in a well concealed area, • Washrooms should have seats and/or fixed chairs to provide clear space to clients waiting and queuing, • Washroom doors to be lockable, • The financial institutions/agents should demonstrate critical, prompt processes of debt collection and ensure privacy to their customers | • Security personnel must be easily identifiable (awards provided by the institution they are to secure, uniforms and badges to be worn), • Security agency/staff to ensure continuous monitoring of movements of vehicles to enhance security and detect trespassers, • Security is alert on security calendar of the FI premises, • Be civil in presentation of customer, • Possess robust skills for dealing with diverse clients including disabled persons, • Checking of water points, • Presence of first-aid kit in place, • Disability access available inside the financial institution, • Providing queue machine/service or ticket office for managing queues, • Must address tendencies of disfigure/mishandling, • FIs must possess appropriate, visible necessary facility for clients especially for disabled people, • Queue guide must advise the client, guide or usher to the preferred service or client desk, • Washrooms and waiting rooms, chairs are enough for clients, • FIs must possess toilets to include seats not squat systems, hot and cold water in their restrooms, • Washroom service requirements are to include: washrooms and toilets are gender labelled, locks for privacy and the like | • Update on the identified security policy, workers or doormen security agency, • On-site visit and reporting for compliance surveillance, • Audit reports
+```
+
+[PAGE 8]
+[SIGNATURE PAGE]

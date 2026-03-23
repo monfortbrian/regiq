@@ -1,0 +1,118 @@
+[PAGE 1]
+DIRECTIVE N°0025 OF 9/4/2020 OF THE NATIONAL BANK OF RWANDA GOVERNING THE OPERATIONALISATION OF THE EXTENDED LENDING FACILITY TO BANKS
+
+PREAMBLE
+
+Pursuant to Law N° 48/2017 of 23/09/2017 governing the National Bank of Rwanda especially in its Articles 6, 8, 9, 10; 15; 22 and 56;
+
+Pursuant to Law N° 47/2017 of 23/9/2017 governing the organization of banking especially in its Articles 19;
+
+Considering the National Bank of Rwanda's statement of 18th March, 2020 introducing “Extended Lending Facility to Banks/ELFB” in light of the need to mitigate liquidity risk in the banking sector as one of the potential effects of the COVID-19 pandemic on the Rwandan economy;
+
+The National Bank of Rwanda hereinafter referred to as the “Central Bank” decrees:
+
+Article One: Purpose and Scope of this Directive
+
+This Directive aims at establishing terms and conditions governing the operationalization of the ELFB.
+
+Further to conditions stated in Article 4 of this Directive, this ELFB is limited to a bank experiencing liquidity shock due to the COVID-19 impact but with sufficient acceptable collateral. The facility shall be abbreviated as “COVID-19 ELFB.”
+
+Article 2: Definitions
+
+In this Directive unless the context otherwise requires, the following terms shall mean:
+
+1° Central Securities Depository(CSD): is the electronic registry of all debts and equities securities maintained at and by the Central Bank
+
+2° Central Bank Rate (CBR): CBR is the policy rate set by the monetary policy committee and is used to signal the monetary policy stance
+
+Page 1 of 4
+
+National Bank of Rwanda-Restricted
+
+[PAGE 2]
+3° Liquidity Coverage Ratio (LCR): is the proportion of highly liquid assets held by a financial institution/bank to fund cash outflows for 30 days
+
+4° Net Stable Funding Ratio (NSFR): indicates proportion of Available Stable Funding over a period of time (one year in Rwanda). It aims to promote resilience over a longer time horizon by creating incentives for banks to fund their activities with more stable sources of funding on an ongoing basis
+
+Article 3: Accessibility and conditions for eligibility
+
+COVID-19 ELFB provided for in this Directive is open for a period of six months from the date of the signature of this Directive. The accessibility period may be extended at the discretion of the Central Bank based on the prevailing liquidity and macro-economic conditions.
+
+For a bank, to be eligible for the COVID-19 ELFB, the following conditions shall be met:
+1° Experiencing transitory liquidity distress, reflected in low and decreasing LCR as a consequence of the COVID -19 impact;
+2° Be adequately capitalized as required by the capital adequacy regulation, unless the Central Bank decides otherwise;
+3° Have eligible collateral as per Directive No 01/2016 of 19/1/2016 on collaterals accepted by the Central Bank;
+4° Any other conditions that the Central Bank may deem necessary
+
+In any case, the decision of granting COVID-19 ELFB is at the discretion of the Central Bank and is taken on a case-by-case basis.
+
+Article 4: The tenor of the COVID-19 ELFB
+
+Once granted, the tenor of the COVID-19 ELFB shall be either three, six or twelve months as may be approved by the Central Bank. However, should the applicant bank still demonstrate liquidity challenges associated to COVID-19 at maturity of the facility, such a bank may request the Central Bank to extend the maturity to an agreed period.
+
+Article 5: Application for the COVID-19 ELFB
+
+A bank meeting the eligibility criteria, may apply for the COVID-19 ELFB.
+
+An application for the COVID-19 ELFB shall be submitted to the Governor of the Central Bank in writing by the Managing Director/Chief Executive Officer of the applicant bank. The application shall specify and be accompanied by the following:
+
+1° The requested amount;
+2° Brief description of liquidity challenges that the bank is facing and mitigation measures so far taken to address those challenges;
+3° Projected cash flows for next twelve months from the period of the request (maturity mismatch);
+4° The bank’s current Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR);
+
+Page 2 of 4
+
+National Bank of Rwanda-
+Restricted
+
+[PAGE 3]
+Article 6: Assessment of the application and Central Bank approval
+
+The Central Bank shall assess the application and notify its decision to the applicant bank within 48 hours from the receipt of the application. In the event the COVID-19 ELFB is approved, the applicant’s bank account in the Central Bank shall be credited accordingly and securities pledged shall be automatically transferred to the Central Bank via Central Securities Depository.
+
+Article 7: Borrowing limits and collateral valuation
+
+The limit of each bank to the COVID-19 ELFB shall be based and fixed on the weight of its size in total outstanding credit to private sector of the system using the most recent data and its capacity to avail the corresponding unencumbered acceptable collaterals. This amount may be advanced in a single or several installments.
+
+The valuation and hair cut calculation shall be done as per the provisions of Directive No 01/2016 of 19/1/2016 on collaterals accepted by the Central Bank.
+
+Article 8: Applicable interest rate and its calculation
+
+The ELFB is subject to an interest rate equal to the CBR. The CBR is fixed until the maturity of the facility. The formula to calculate interest amount will be the amount allotted*CBR*days/364.
+
+Article 9: Repayment
+
+The COVID-19 ELFB shall have a bullet repayment. At maturity date, the beneficiary bank’s account at the Central Bank shall be automatically debited of principal and interest, through Real Time Gross Settlement.
+
+The collateral shall be automatically returned to the bank via Central Securities Depository.
+
+Article 10: Penalty for defaulting Bank
+
+Except in conditions of extension as stipulated in Article 4 of this Directive, if the beneficiary bank fails to settle on the due date, the Central Bank shall retain collaterals and impose a penalty of up to 50 basis points at each additional day. Within 15 days of default, the Central Bank shall liquidate the collateral(s) and transfer it/them to its assets.
+
+[PAGE 4]
+Article 11: Restrictions to COVID-19 ELFB beneficiary bank
+
+Unless approved by the Central Bank, a COVID-19 ELFB beneficiary bank is prohibited from paying out dividends until the maturity of the facility.
+
+The Central Bank may determine any other prohibition at its discretion, as well as any other supervisory measures to restore the liquidity situation of the bank such as requiring the bank for a liquidity restoration plan.
+
+The above prohibitions shall take effect once the bank receives the COVID-19 ELFB and terminate once the bank has repaid the COVID-19 ELFB in full.
+
+Article 12: Repealing provisions
+
+Any instrument or prior provision contrary to this Directive is hereby repealed.
+
+Article 13: Commencement
+
+This Directive shall come into force on the date of its signature.
+
+Kigali on 9th April 2020
+
+RWANGOMBWA John
+Governor
+
+Page 4 of 4  
+National Bank of Rwanda-
+Restricted

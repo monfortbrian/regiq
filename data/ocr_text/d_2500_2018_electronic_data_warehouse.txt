@@ -1,0 +1,434 @@
+[PAGE 1]
+The Governor
+
+DIRECTIVE N° 2500/2018 - 007 [613] OF 05/10/2018 OF THE NATIONAL BANK OF RWANDA IMPLEMENTING THE REGULATION ON REPORTING REQUIREMENTS
+
+PREAMBLE
+
+Pursuant to Law n°48/2017 of 23/09/2017 governing the National Bank of Rwanda, especially in Articles 6, 8, 9, 10 and 15;
+
+Pursuant to Regulation of the National Bank of Rwanda N° 2100 /2018 - 008[614] of 25/07/2018 on reporting requirements especially in its articles 4, 5, 10, 11, 12 and 14;
+
+The National Bank of Rwanda hereinafter referred to as “Central Bank”, decrees:
+
+CHAPTER ONE: GENERAL PROVISIONS
+
+Article One: Definitions
+
+In this Directive, the following terms or expressions shall mean:
+
+Regulation on reporting requirements: the regulation of the National Bank of Rwanda No 2100 /2018 - 008[614] of 25/07/2018 on reporting requirements as may be complemented or modified.
+
+Other terms and expressions used in this Directive have the same meaning as provided for in the regulation on reporting requirements.
+
+Article 2: Purpose of this Directive
+
+The purpose of this Directive is to implement the regulation on reporting requirements by:
+1° specifying data to be availed or uploaded by supervised institutions;
+2° setting modalities of validation and modification of data or information and
+3° defining violations and related administrative fines for non-compliance with the Electronic Data Warehouse reporting requirements.
+
+Page 1 of 11
+
+[PAGE 2]
+CHAPTER II: DATA TO BE AVAILED/UPLOADED AND ITS FREQUENCY
+
+Article 3: Data to be availed or uploaded by Banks
+
+Each bank must avail or upload the below data within the set frequency as follows:
+
+S/N | Template Name | Template Description | Frequency
+1 | BRANCHINFO | Branch Information | Daily
+2 | GLCODES | General Ledger Details | Daily
+3 | GLMAPS | General Ledger Mappings | Daily
+4 | CCYRATES | Currency Rates | Daily
+5 | CUST | Customer Information | Daily
+6 | ACCT | Accounts Information | Daily
+7 | ACCTMAPS | Internal Accounts Mappings | Daily
+8 | ATMUPTDLY | ATM Uptime Daily | Daily
+9 | FINCAPTXN | Financial Cash CAP Transaction | Daily
+10 | TRIALBAL | Trial Balance | Daily
+11 | BOUNCECHEQ | Bounce Cheque | Daily
+12 | FXCAPS | Foreign Exchange Cash Purchase & Sale | Daily
+13 | FXDEMAND | Forex Demand | Daily
+14 | FRAUDTXN | Fraud Transaction | Daily
+15 | SUSPITXN | Suspicious Transaction | Daily
+16 | INCIREP | Incident Report | Daily
+17 | CONT | Contracts Information | Daily
+18 | MERCHINFO | Merchant Details | Daily
+19 | ATMPOSDET2 | ATM POS Terminals | Daily
+20 | LOANAPP2 | Loan Application Analysis | Daily
+21 | LOANAPPPRE | Previous Loan Applications | Daily
+22 | MTOMMTRF | MTO - MM Transfer | Daily
+23 | CONTSCHE | Loans Schedules | Monthly
+24 | COLLATERAL | Loan Collaterals | Monthly
+25 | CARDSYS2 | Card System Info | Monthly
+26 | FINMTH | Financial Monthly Data | Monthly
+27 | FINPUBSEC | Public Sector Financial Classification | Monthly
+28 | FINTXN | Financial Transactions | Monthly
+29 | FXTXN | Foreign Exchange Position & Transactions | Monthly
+30 | ATMOFUSTXN | ATM Off us Customer Transaction (Switch Operator) | Monthly
+31 | CROSSBTXN | Cross Border Transaction | Monthly
+32 | INFRASINFO | Bank Infrastructure Info | Monthly
+33 | MGTINFO2 | Management Information | Monthly
+34 | SHMEMBERS | Shareholder Member and Shares | Monthly
+
+Page 2 of 11
+
+[PAGE 3]
+```plaintext
+35  EXAUDITORS                       External Auditors               Monthly
+36  NETPERF                          Network Performance             Monthly
+37  ATMUPMTTH                        ATM Uptime Monthly              Monthly
+38  ATMPOSDT                         ATM POS Down Time               Monthly
+39  ANTICIMAT                        Anticipated Maturity            Monthly
+40  STAFFINFO                        Staff Information               Monthly
+41  STAKEHOLD                        Stakeholder Details             Monthly
+42  PAYAGENT                         Payment Agent Info              Monthly
+43  CONTLOAN                         Contracts Loans Details         Monthly
+44  NPLRECOV                         NPL & Written Off loan recovery Monthly
+45  LOANWRTOFF                       Loan Write-off                  Monthly
+46  LCR                              LCR                             Weekly
+47  LCR_SIG_CURRENCY                 LCR_Sig_Currency                Weekly
+48  MATURITY_MISMATCH                Maturity Mismatch               Monthly
+49  NSFR                             NSFR                            Quarterly
+50  CONCENTRATION_                   Concentration counterparties    Quarterly
+    COUNTERPARTIES
+51  UNENCUMBERED                     Unencumbered assets             Quarterly
+    ASSETS
+52  UNENCUMBERED                     Unencumbered assets currency    Quarterly
+    ASSETS_CURRENCY
+53  CONCENTRATION_INST               Concentration_instruments_product Quarterly
+    RUMENTS_PRODUCT
+54  CAPITAL ADEQUACY                 Capital Adequacy                Quarterly
+55  LEVERAGE RATIO                   Leverage Ratio                  Quarterly
+56  RWA CREDIT RISK                  Risk Weighted Assets For Credit Risk Quarterly
+57  RWA SETTLEMENT                   Settlement Risk                 Quarterly
+    RISK
+58  RWA MARKET RISK                  Market Risk                     Quarterly
+59  RWA OPERATIONAL                  Operational Risk                Quarterly
+    RISK
+60  OPERATIONAL RISK                 Operational Risk Event Data Reporting Quarterly
+    EVENT DATA
+    REPORTING
+61  D-SIB REPORTING                  D-SIB Reporting Requirements    Quarterly
+    REQUIREMENTS
+62  OFF-BALANCE SHEET                Off-Balance Sheet Business(Market  Quarterly
+    BUSINESS                         And Non Market Related)
+63  MONITORING RETAIL &              Monitoring Retail & SME          Quarterly
+    SME PORTFOLIO                    Portfolio(Granularity)
+64  COMPOSITION OF                  Composition Of Claims Secured By  Quarterly
+    CLAIMS SECURED BY               Residential Mortgages
+    RESIDENTIAL
+    MORTGAGES
+     (iv)
+Page 3 of 11
+```
+
+[PAGE 4]
+Article 4: Data to be availed or uploaded by Insurers
+
+Each insurer must avail or upload the below data and within the set frequency as follows:
+
+S/N | Template Name | Template Description | Frequency
+1 | BRANCHINFO | Branch Information | Monthly
+2 | GLCODES | General Ledger Details | Monthly
+3 | GLMAPS | General Ledger Mappings | Monthly
+4 | ACCTMAPS | Internal Accounts Mappings | Monthly
+5 | FINMTH | Financial Monthly Data | Monthly
+6 | CUST | Policy holder information | Monthly
+7 | ACCT | Policy Information | Monthly
+8 | CONT | Policy Terms Information | Monthly
+9 | IGENEXTRA | Insurance general extra policy term information | Monthly
+10 | PFINGEN | Policy Holder Financials [General] | Monthly
+11 | PFINLIFE | Policy Holder Financials [Life] | Monthly
+12 | INSCGEN | Insurance - General Insurance Claim | Monthly
+13 | INSCLIFE | Insurance - Life Insurance Claim | Monthly
+14 | INVESTDET | Investment Details | Monthly
+15 | PENACCTB | Bank Account Details | Monthly
+16 | REINSDET | Reinsurer Details | Monthly
+17 | OTHRECDET | Other Receivable Summary Details | Monthly
+18 | FRAUDTXN | Fraud Transactions | Monthly
+19 | EXAUDITORS | External Auditors | Monthly
+20 | SHMEMBERS | Shareholder Details | Monthly
+21 | MGTINFO2 | Management Information | Monthly
+22 | STAFFINFO | Staff Information | Monthly
+23 | STAKEHOLD | Stakeholder Details | Monthly
+
+Article 5: Data to be availed or uploaded by Insurance Brokers
+
+Each insurance broker must avail or upload the below data and within the set frequency as follows:
+
+S/N | Template_Name | Template_Description | Frequency
+ | FINMTH | Financials | Quarterly
+
+[PAGE 5]
+```plaintext
+Article 6: Data to be availed or uploaded by Special Guarantee Fund
+
+The Special Guarantee Fund must avail or upload the below data and within the set frequency as follows:
+
+S/N  | Template Name | Template Description | Frequency
+FINMTH | Financials  | Quarterly
+
+Article 7: Data to be availed or uploaded by Pension Schemes
+
+Each pension scheme must avail or upload the below data and within the set frequency as follows:
+
+S/N | Template_Name  | Template_Description     | Frequency
+1   | BRANCHINFO     | Branch Information       | Monthly
+2   | GLCODES        | General Ledger Details   | Monthly
+3   | GLMAPS         | General Ledger Mappings  | Monthly
+4   | ACCTMAPS       | Internal Accounts Mappings | Monthly
+5   | CUST           | Customers                | Monthly
+6   | ACCT           | Accounts                 | Monthly
+7   | FINMTH         | Financial Monthly Data   | Monthly
+8   | PENACCTB       | Bank Account Details     | Monthly
+9   | STAKEHOLD      | Stakeholder Details      | Monthly
+10  | INVESTDET      | Investment Details       | Monthly
+11  | SHMEMBERS      | Shareholder Details      | Monthly
+12  | EXAUDITORS     | External Auditors        | Monthly
+13  | FRAUDTXN       | Fraud Transactions       | Monthly
+14  | MGTINFO2       | Management Information   | Monthly
+15  | STAFFINFO      | Staff Information        | Monthly
+
+Article 8: Data to be availed or uploaded by Microfinance Institutions
+
+Each microfinance institution must avail or upload the below data and within the set frequency as follows:
+
+S/N | Template_Name | Template_Description     | Frequency
+1   | CCYRATES      | Currency Rates Daily     | Daily
+2   | ACCTMAPS      | Internal Accounts Mappings | Daily
+3   | GLCODES       | General Ledger Details   | Daily
+4   | GLMAPS        | General Ledger Mappings  | Daily
+5   | BRANCHINFO    | Branch Information       | Daily
+6   | ACCTOFF       | Account Officers         | Daily
+
+Page 5 of 11
+```
+
+[PAGE 6]
+```plaintext
+7   MERCHINFO    Merchant & Payment Agent Details   Daily
+8   CUST         Customer Information               Daily
+9   ACCT         Account Information                Daily
+10  CONT         Contracts Information              Daily
+11  LOANAPP2     Loan Application Analysis          Daily
+12  LOANAPPPRE   Loan Application Prev Cont 
+                 Information                        Daily
+13  FINCAPTXN    Financial Cash CAP Transaction     Daily
+14  ATMPOSDET2   ATM POS Terminal Details           Daily
+15  INCIREP      Incident Report                    Daily
+16  FRAUDTXN     Fraud Transaction Details          Daily
+17  SUSPTXN      Suspicious Transaction template    Daily
+18  TRIALBAL     Trial Balance                      Daily
+19  FINMTH       Financial Monthly Data             Monthly
+20  FINTXN       Financial Transactions             Monthly
+21  CONTLOAN     Contract Loans Information         Monthly
+22  COLLATERAL   Contract Collaterals               Monthly
+23  NPLRECOV     NPL & Written Off loan recovery    Monthly
+24  LOANWRTOFF   Loans Written Off                  Monthly
+25  CONTCHE      Contract Schedules                 Monthly
+26  CARDSYS2     Card System Details                Monthly
+27  SHMEMBERS    Shareholder Details                Monthly
+28  EXAUDITORS   External Auditors                  Monthly
+29  STAFFINFO    Staff Information                  Monthly
+30  MGTINFO2     Management Information             Monthly
+31  STAKEHOLD    Stakeholder Details                Monthly
+32  MFIROBBERY2  MFI - Robbery Cases                Monthly
+33  MFIIMSMGT2   MFI - Mismanagement                Monthly
+34  MFILODEF2    MFI - Loan Defaulters              Monthly
+35  MFIIMPLE2    MFI - Implementation               Monthly
+36  MFIEMBEZZ2   MFI - Embezzlement                 Monthly
+37  MFIFORECST   MFI - Forecasting                  Monthly
+38  MFILEGAL     MFI - Legal Recovery               Monthly
+39  INFRASINFO   Infrastructure Info                Monthly
+40  PAYAGENT     Payment Agent Info                 Monthly
+
+Article 9: Data to be availed by E- Money Issuers (EMI)
+
+Each EMI must avail or upload the below data and within the set frequency as follows:
+
+S/N  Template_Name   Template_Description                     Frequency
+1    SUBSCRIBER      MNO - Individual subscriber details      Daily
+2    MERCHINFO       Merchant & Payment Agent Details         Daily
+
+Page 6 of 11
+```
+
+[PAGE 7]
+```plaintext
+3      MNOTRUST       MNO - Trust & E-Platform Account         Daily      
+4      PAYAGENT       Payment Agent Info                       Monthly    
+5      NETWPERF       Network Performance                      Monthly    
+6      CHWAYFWD       Challenges WayForward                    Monthly    
+7      MNOCONPR       MNO - Consumer Protection                Monthly    
+8      MNUSACT        MNO - Cust Acct Summary                  Monthly    
+9      MNOFRMGT       MNO - Fraud Management                   Monthly    
+10     MNOSUBGEN      MNO - Subscriber Gender Age              Monthly    
+11     MNOTXN         MNO - Transaction Summary                Monthly    
+12     RTMNOMM        RT_MNO_Mobile money                      Real time  
+
+Article 10: Data to be availed or uploaded by Money Remittances Providers
+
+Each money remittance provider must avail the below or upload data and within the set 
+frequency as follows:
+
+S/N   Template_Name   Template_Description            Frequency    
+      MTOMMTRF        MTO - MM Transfer                Daily        
+      MTOMMTRF        MTO - MM Transfer                Real time    
+
+Article 11: Data to be availed or uploaded by Switches Providers
+
+Each switch provider must avail or upload the below data and within the set frequency 
+as follows:
+
+S/N   Template_Name   Template_Description            Frequency    
+1     ATMUPTDLY       ATM Uptime Daily                Daily        
+2     CHWAYFWD        Challenges WayForward           Monthly      
+3     SWTCAPB         Switch - Capacity Build         Monthly      
+4     SWTHIGHL        Switch - Highlights             Monthly      
+5     SWTPERF         Switch - Performance            Monthly      
+
+Article 12: Data to be availed or uploaded by Forex Bureaus
+
+Each forex bureau must avail or upload the below data and within the set frequency as 
+follows:
+
+S/N   Template_Name   Template_Description            Frequency    
+1     CCYRATES        Currency Rates                  Daily        
+2     FXCAPS          Foreign Exchange Cash Purchase & Sale  Daily  
+
+Page 7 of 11
+```
+
+[PAGE 8]
+```plaintext
+3   FXSUSPTXN   FX Suspicious Transactions          Daily
+4   ACCT        Bank Account Information            Monthly
+5   FINMTH      Financial Monthly Data              Monthly
+6   FXTXN       Foreign Exchange Position &         Monthly
+               Transactions 
+    STAKEHOLD   Stakeholder Details                 Monthly
+8   INFRASINFO  Infrastructure Info                 Monthly
+9   EXAUDITORS  External Auditors                   Monthly
+10  SHMEMBERS   Shareholder Details                 Monthly
+11  SRMANDIR    Senior Manager & Director details   Monthly
+
+Article 13: Data to be availed or uploaded by operator of Credit Bureaus
+
+Each operator of Credit Bureau must avail or upload the below data and within the set 
+frequency as follows:
+
+SN   Template_Name  Template_Description             Frequency
+1    FINMTH         Financial Monthly Data           Monthly
+2    GLCODES        General Ledger Details           Monthly
+3    GLMAPS         General Ledger Mappings          Monthly
+4    SHMEMBERS      Shareholder Details              Monthly
+5    EXAUDITORS     External Auditors                Monthly
+6    STAFFINFO      Staff Information                Monthly
+7    MGTINFO2       Management Information           Monthly
+8    STAKEHOLD      Stakeholder Details              Monthly
+9    ACCTMAPS       Internal Accounts Mappings       Monthly
+11   CRBDATAUSG     CRB data usage                   Monthly
+12   CRBCOVSUM      CRB coverage                     Monthly
+13   MFIMISMGT2     Mismanagement Details            Monthly
+
+Article 14: Modification or creation of templates
+
+The Central Bank may modify existing templates or create new ones for collecting 
+sufficient information and update the BNR Vision Business Intelligence system 
+accordingly.
+```
+
+
+[PAGE 9]
+CHAPTER III: COMMON PROVISIONS APPLICABLE TO SUPERVISED INSTITUTIONS.
+
+Article 15: Time of the data availability and upload
+
+As provided for in the regulation on reporting requirements, any supervised institution shall avail or upload required data as follows:
+
+1° for daily data related to foreign exchange for cash purchase and sales, the same day before 6:00 pm;
+2° for other daily data: the next working day, before 10: am;
+3° for monthly data: Within five (5) working days of the following month;
+4° for quarterly data: Within five (5) working days of the following quarter.
+
+Article 16: Mandatory information
+
+Each supervised institution shall ensure that all required data/information are properly provided in line with guidelines before availing readiness or uploading in BNR Vision Business Intelligence System.
+
+Before entering into business relationship with its customers, each supervised institution shall ensure that all mandatory data/information are collected as specified in the guidelines. 
+
+Article 17: Data validation
+
+The initial validation is done by the system to assess if availed or uploaded data/information meets the system guidelines.
+
+Notwithstanding with paragraph one of this article, the Central Bank notifies the supervised institution of any corrections, modifications, incomplete, false or erroneous data/information.
+
+Article 18: Guidance for data modification by a supervised institution
+
+Any data modification in form of adjustment of the end period or correction of any error in data already extracted or uploaded shall be done prospectively.
+
+A supervised institution must modify the availed data in the following situation:
+
+a) Upon recommendation from the Central Bank as a result of data validation exercise;
+b) Upon recommendation from external auditor and in the manner provided for in the regulation on reporting requirements.
+
+Page 9 of 11
+
+[PAGE 10]
+```plaintext
+Article 19: Readiness requirements
+
+Each supervised institution using ADF shall avail Readiness Flag indicating that it is ready for the Central Bank to extract data for the given business date.
+
+In this Article, business date means the last hour or day of the reporting period.
+
+CHAPTER IV: MISCELEONEOUS, ADMINISTRATIVE FINES AND FINAL PROVISIONS
+
+Article 20: Access to reporting templates and the system guidelines
+
+Reporting templates and the system guidelines shall be accessed from the Central Bank website portal. The access shall be limited only to authorized staff from supervised institutions.
+
+Article 21: Violations and its administrative fines
+
+The following are violations and related administrative fines with regard to reporting requirements as provided for in the regulation on reporting requirements and this Directive:
+
+S/N | Violation | Pecuniary sanctions
+1 | Failure to avail or upload required data/information within the set deadline | Banks and Insurers - 500,000 FRW for non-availability or non-uploading and - 50,000 FRW for each day of delay until data/information are availed or uploaded
+| | Insurance brokers - 100,000 FRW for non-availability or non-uploading and
+| | Pension Schemes
+| | Microfinance Institutions
+| | E-money issuers - 10,000 FRW for each day of delay until data/information are availed or uploaded
+| | Remittances Providers
+| | Switches providers
+| | Forex Bureaus
+| | Operator of Credit Bureaus
+| | Other Financial Institution
+```
+
+[PAGE 11]
+```plaintext
+2 Availability of incomplete/false information or erroneous information | Banks and Insurers | - 50,000 FRW per template and per day until the submission of complete or corrected data/information from the date of notification of the incomplete/false/erroneous information
+| Insurance brokers | 
+| Pension Scheme |
+| Microfinance Institutions | - 10,000 FRW per template and per day until the modification or correction from the date of notification of the false/erroneous information
+| E- money issuers |
+| Remittances Providers |
+| Switches providers |
+| Forex Bureaus |
+| Operator of Credit Bureaus |
+| Other Financial Institutions |
+
+Article 22: Commencement
+
+This Directive shall come into force on the date of its signature.
+
+Done at Kigali on 09/10/2018
+
+Dr NSANZABAGANWA Monique
+Deputy Governor and Acting Governor
+
+Page 11 of 11
+```
