@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>RegIQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --navy:#0d1f35;
+  --navy-2:#152d47;
+  --navy-3:#1e3d60;
+  --accent:#2060df;
+  --accent-light:#e8f0fe;
+  --accent-bd:#c5d8fc;
+  --text:#0d1117;
+  --text-2:#424a57;
+  --text-3:#6b7585;
+  --border:#e4e8ef;
+  --border-2:#d0d7e2;
+  --surface:#f6f8fb;
+  --surface-2:#eef1f6;
+  --white:#ffffff;
+  --online:#16a34a;
+  --online-ring:rgba(22,163,74,0.22);
+  --r-sm:6px;--r-md:10px;--r-lg:16px;--r-xl:20px;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --shadow-md:0 4px 20px rgba(13,31,53,0.11),0 2px 6px rgba(13,31,53,0.06);
+}
+
+html,body{
+  height:100%;font-family:var(--font);background:var(--white);
+  color:var(--text);font-size:13px;line-height:1.5;overflow:hidden;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+#app{display:flex;flex-direction:column;height:100vh}
+
+/* ── Header ── */
+#header{
+  display:flex;align-items:center;gap:10px;
+  padding:11px 14px;border-bottom:1px solid var(--border);
+  background:var(--white);flex-shrink:0;
+}
+.logo-wrap{
+  width:34px;height:34px;border-radius:9px;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;overflow:hidden;
+}
+.logo-wrap img{width:34px;height:34px;object-fit:cover;border-radius:9px;display:block}
+.header-info{flex:1;min-width:0}
+.header-name{font-size:13.5px;font-weight:600;color:var(--text);letter-spacing:-0.25px;line-height:1.2}
+.header-sub{font-size:10.5px;color:var(--text-3);margin-top:1px}
+
+/* ── Pulsing dot ── */
+.status-dot{
+  position:relative;width:8px;height:8px;
+  border-radius:50%;background:var(--online);flex-shrink:0;
+}
+.status-dot::before{
+  content:'';position:absolute;inset:-3px;border-radius:50%;
+  background:var(--online-ring);
+  animation:pulse 2s ease-out infinite;
+}
+.status-dot.offline{background:#94a3b8}
+.status-dot.offline::before{display:none}
+@keyframes pulse{
+  0%{transform:scale(0.7);opacity:1}
+  70%{transform:scale(2.1);opacity:0}
+  100%{transform:scale(2.2);opacity:0}
+}
+
+/* ── Jurisdiction bar ── */
+#jur-bar{
+  display:flex;align-items:center;gap:5px;
+  padding:9px 14px;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  overflow-x:auto;flex-shrink:0;scrollbar-width:none;
+}
+#jur-bar::-webkit-scrollbar{display:none}
+
+.jur-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 11px;border-radius:999px;
+  border:1px solid var(--border);background:var(--white);
+  font-family:var(--font);font-size:12px;font-weight:500;
+  color:var(--text-3);white-space:nowrap;flex-shrink:0;cursor:pointer;
+  transition:background 0.18s,border-color 0.18s,color 0.18s,box-shadow 0.18s;
+  outline:none;
+}
+.jur-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.jur-btn:hover:not(.active):not(.soon){
+  border-color:var(--border-2);color:var(--text-2);
+  background:rgba(0,0,0,0.02);
+}
+.jur-btn.active{
+  background:var(--navy);border-color:var(--navy);
+  color:#fff;box-shadow:0 1px 4px rgba(13,31,53,0.18);
+}
+.jur-btn.soon{opacity:0.62;cursor:not-allowed}
+
+/* ── Flag image - wave on active & hover ── */
+.jur-flag{
+  width:16px;height:11px;
+  object-fit:cover;border-radius:2px;
+  flex-shrink:0;display:block;
+  transform-origin:50% 80%;
+}
+.jur-btn.active .jur-flag{
+  animation:wave 2.2s ease-in-out infinite;
+}
+.jur-btn:not(.soon):hover .jur-flag{
+  animation:wave 0.65s ease-in-out 1;
+}
+
+
+.soon-badge{
+  margin-left:2px;font-size:9px;font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase;
+  color:#92400e;background:#fef3c7;
+  padding:2px 5px;border-radius:5px;
+}
+
+/* ── Messages ── */
+#messages{
+  flex:1;overflow-y:auto;padding:14px 14px 8px;
+  display:flex;flex-direction:column;gap:12px;
+  scrollbar-width:thin;scrollbar-color:var(--border) transparent;
+}
+
+/* ── Empty / greeting ── */
+#empty{
+  display:flex;flex-direction:column;
+  align-items:center;text-align:center;
+  padding:20px 16px 8px;
+}
+.empty-icon-ring{
+  width:46px;height:46px;border-radius:12px;
+  background:var(--surface-2);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.empty-title{
+  font-size:16px;font-weight:600;color:var(--text);
+  margin-bottom:6px;letter-spacing:-0.3px;line-height:1.3;
+}
+.empty-body{
+  font-size:12px;color:var(--text-3);
+  line-height:1.7;margin-bottom:18px;
+  white-space:pre-line;
+}
+
+/* Suggestion chips */
+.s-grid{display:flex;flex-direction:column;gap:5px;width:100%}
+.s-chip{
+  display:flex;align-items:center;gap:8px;text-align:left;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r-md);padding:8px 11px;
+  font-family:var(--font);font-size:11.5px;font-weight:400;
+  color:var(--text-2);cursor:pointer;
+  transition:border-color 0.15s,background 0.15s,color 0.15s;
+  outline:none;
+}
+.s-chip:hover{border-color:var(--accent);color:var(--text);background:var(--accent-light)}
+.s-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.s-chip svg{color:var(--text-3);flex-shrink:0}
+
+/* ── Coming soon screen ── */
+#soon-screen{
+  display:none;flex-direction:column;
+  align-items:center;justify-content:center;
+  flex:1;text-align:center;padding:24px 20px;
+}
+#soon-screen.visible{display:flex}
+.soon-flag-wrap{
+  margin-bottom:14px;
+  animation:wave 2s ease-in-out infinite;
+  transform-origin:50% 80%;
+  display:inline-block;
+}
+.soon-flag-img{
+  width:52px;height:35px;
+  object-fit:cover;border-radius:4px;
+  display:block;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+.soon-badge-lg{
+  font-size:9.5px;font-weight:600;
+  color:#92400e;background:#fef3c7;
+  border:1px solid #fcd34d;border-radius:20px;
+  padding:4px 10px;letter-spacing:0.05em;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.soon-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:7px;letter-spacing:-0.2px}
+.soon-body{font-size:12px;color:var(--text-3);line-height:1.7;margin-bottom:18px;white-space:pre-line}
+.soon-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 18px;background:var(--navy);color:white;
+  border:none;border-radius:var(--r-md);
+  font-family:var(--font);font-size:12px;font-weight:500;
+  cursor:pointer;text-decoration:none;
+  transition:background 0.15s;outline:none;
+}
+.soon-cta:hover{background:var(--navy-2)}
+.soon-cta:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ── Message bubbles ── */
+.msg{display:flex;gap:7px;align-items:flex-end}
+.msg.user{flex-direction:row-reverse}
+.av{
+  width:25px;height:25px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:9.5px;font-weight:600;color:white;
+}
+.av-user{
+  width:25px;height:25px;border-radius:50%;
+  background:var(--surface-2);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.bbl{
+  max-width:87%;padding:9px 12px;
+  font-size:12.5px;line-height:1.65;border-radius:var(--r-lg);
+}
+.msg.user .bbl{background:var(--navy);color:white;border-bottom-right-radius:4px}
+.msg.bot .bbl{
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--text);border-bottom-left-radius:4px;
+}
+.bbl p{margin:0 0 5px}.bbl p:last-child{margin-bottom:0}
+.bbl strong{font-weight:600}
+.bbl ol,.bbl ul{padding-left:16px;margin:4px 0}
+.bbl li{margin-bottom:2px}
+
+/* Typing dots */
+.dots{
+  display:flex;gap:4px;align-items:center;
+  padding:10px 13px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);border-bottom-left-radius:4px;
+}
+.dots span{
+  width:5px;height:5px;border-radius:50%;background:var(--text-3);
+  animation:dot 1.3s ease-in-out infinite;
+}
+.dots span:nth-child(2){animation-delay:.18s}
+.dots span:nth-child(3){animation-delay:.36s}
+@keyframes dot{
+  0%,60%,100%{transform:translateY(0);opacity:.35}
+  30%{transform:translateY(-4px);opacity:1}
+}
+
+/* Citation chips */
+.cites{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.cite-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--accent-light);border:1px solid var(--accent-bd);
+  border-radius:20px;padding:2px 8px;
+  font-size:10px;font-weight:500;color:#1749b1;
+  cursor:pointer;transition:background 0.12s;outline:none;
+}
+.cite-chip:hover{background:#d4e8fe}
+.cite-chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cite-dot{width:4px;height:4px;border-radius:50%;background:#3b82f6;flex-shrink:0}
+
+/* ── Source drawer ── */
+#src-drawer{
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--white);border-top:1px solid var(--border);
+  border-radius:var(--r-lg) var(--r-lg) 0 0;
+  padding:14px;box-shadow:var(--shadow-md);z-index:200;
+  transform:translateY(100%);
+  transition:transform 0.22s cubic-bezier(0.32,0,0.15,1);
+  max-height:52vh;display:flex;flex-direction:column;
+}
+#src-drawer.open{transform:translateY(0)}
+.drawer-handle{width:36px;height:3px;border-radius:2px;background:var(--border-2);margin:0 auto 12px;flex-shrink:0}
+.drawer-label{font-size:9.5px;font-weight:600;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:4px;flex-shrink:0}
+.drawer-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.4;flex-shrink:0}
+.drawer-body{font-size:11.5px;color:var(--text-3);line-height:1.65;overflow-y:auto}
+.drawer-close{
+  position:absolute;top:14px;right:14px;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--surface-2);border:none;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--text-3);outline:none;
+}
+.drawer-close:hover{background:var(--border)}
+.drawer-close:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ── Input ── */
+#input-area{padding:10px 14px 13px;border-top:1px solid var(--border);background:var(--white);flex-shrink:0}
+#input-box{
+  display:flex;align-items:flex-end;gap:7px;
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--r-lg);padding:7px 7px 7px 13px;
+  transition:border-color 0.15s,box-shadow 0.15s;
+}
+#input-box:focus-within{border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(32,96,223,0.08)}
+#input-box.disabled-jur{opacity:0.5;pointer-events:none;background:var(--surface-2)}
+#q{
+  flex:1;border:none;background:transparent;font-family:var(--font);
+  font-size:12.5px;color:var(--text);resize:none;outline:none;
+  max-height:90px;min-height:20px;line-height:1.5;
+}
+#q::placeholder{color:var(--text-3)}
+#send{
+  width:32px;height:32px;border-radius:var(--r-md);
+  background:var(--navy);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:background 0.15s,transform 0.1s;outline:none;
+}
+#send:hover:not(:disabled){background:var(--navy-2);transform:scale(1.04)}
+#send:active:not(:disabled){transform:scale(0.96)}
+#send:disabled{opacity:0.35;cursor:not-allowed}
+#send:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#send svg{display:block;pointer-events:none}
+
+/* ── Footer ── */
+#footer{padding:5px 14px 8px;font-size:9.5px;color:var(--text-3);text-align:center;flex-shrink:0}
+</style>
+</head>
+<body>
+<div id="app" role="main">
+
+  <header id="header" role="banner">
+    <div class="logo-wrap" id="logo-wrap" aria-hidden="true"></div>
+    <div class="header-info">
+      <div class="header-name">RegIQ</div>
+      <div class="header-sub">East Africa · Regulatory IQ</div>
+    </div>
+    <div aria-live="polite" aria-atomic="true">
+      <div class="status-dot" id="status-dot" role="status" aria-label="System online"></div>
+    </div>
+  </header>
+
+  <nav id="jur-bar" role="tablist" aria-label="Select jurisdiction">
+    <button class="jur-btn active" role="tab" aria-selected="true" data-jur="bnr" data-cc="rw" data-name="Rwanda · BNR">
+      <img class="jur-flag" src="https://flagcdn.com/w20/rw.png" alt="Rwanda" aria-hidden="true"/>Rwanda · BNR
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="cbk" data-cc="ke" data-name="Kenya · CBK">
+      <img class="jur-flag" src="https://flagcdn.com/w20/ke.png" alt="Kenya" aria-hidden="true"/>Kenya · CBK<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="bou" data-cc="ug" data-name="Uganda · BOU">
+      <img class="jur-flag" src="https://flagcdn.com/w20/ug.png" alt="Uganda" aria-hidden="true"/>Uganda · BOU<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="bot" data-cc="tz" data-name="Tanzania · BOT">
+      <img class="jur-flag" src="https://flagcdn.com/w20/tz.png" alt="Tanzania" aria-hidden="true"/>Tanzania · BOT<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="brb" data-cc="bi" data-name="Burundi · BRB">
+      <img class="jur-flag" src="https://flagcdn.com/w20/bi.png" alt="Burundi" aria-hidden="true"/>Burundi · BRB<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="bcc" data-cc="cd" data-name="DRC · BCC">
+      <img class="jur-flag" src="https://flagcdn.com/w20/cd.png" alt="DRC" aria-hidden="true"/>DRC · BCC<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="cbs" data-cc="so" data-name="Somalia · CBS">
+      <img class="jur-flag" src="https://flagcdn.com/w20/so.png" alt="Somalia" aria-hidden="true"/>Somalia · CBS<span class="soon-badge">Soon</span>
+    </button>
+    <button class="jur-btn soon" role="tab" aria-selected="false" aria-disabled="true" data-jur="bss" data-cc="ss" data-name="South Sudan · BSS">
+      <img class="jur-flag" src="https://flagcdn.com/w20/ss.png" alt="South Sudan" aria-hidden="true"/>S. Sudan · BSS<span class="soon-badge">Soon</span>
+    </button>
+  </nav>
+
+  <div id="messages" role="log" aria-live="polite" aria-label="Conversation">
+
+    <div id="empty" aria-label="Start a conversation">
+      <div class="empty-icon-ring" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e3d60" stroke-width="1.8">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      </div>
+      <p class="empty-title" id="greeting-title"></p>
+      <p class="empty-body" id="greeting-body"></p>
+      <div class="s-grid" id="s-grid" role="list"></div>
+    </div>
+
+    <div id="soon-screen" role="status" aria-live="polite">
+      <div class="soon-flag-wrap">
+        <img class="soon-flag-img" id="soon-flag-img" src="" alt="Country flag" aria-hidden="true"/>
+      </div>
+      <span class="soon-badge-lg">Coming Soon</span>
+      <p class="soon-title" id="soon-title">Kenya · CBK</p>
+      <p class="soon-body" id="soon-body"></p>
+      <a href="https://github.com/monfortbrian" target="_blank" rel="noopener noreferrer"
+         class="soon-cta" aria-label="Chat with Brian on GitHub">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+        Chat with Brian
+      </a>
+    </div>
+
+  </div>
+
+  <div id="src-drawer" role="dialog" aria-modal="true" aria-label="Source reference" aria-hidden="true">
+    <div class="drawer-handle" aria-hidden="true"></div>
+    <button class="drawer-close" id="drawer-close" aria-label="Close source">
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+    <p class="drawer-label">Source</p>
+    <p class="drawer-title" id="drawer-title"></p>
+    <div class="drawer-body" id="drawer-body"></div>
+  </div>
+
+  <div id="input-area">
+    <div id="input-box" role="group" aria-label="Message input">
+      <textarea id="q" rows="1"
+        placeholder="Ask any compliance question…"
+        aria-label="Your compliance question"
+        autocomplete="off" spellcheck="true"
+      ></textarea>
+      <button id="send" disabled aria-label="Send message" aria-disabled="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <footer id="footer" role="contentinfo">
+    RegIQ · Always verify with your central bank
+  </footer>
+
+</div>
+<script src="panel.js"></script>
+</body>
+</html>
