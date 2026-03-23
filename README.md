@@ -4,7 +4,7 @@
 
 RegIQ transforms central bank circular and directive texts into clear, usable answers. Ask a compliance question in plain language and receive a precise response with the exact source, directive number, article, and page.
 
-Built for compliance officers, bank legal teams, and financial regulators across Rwanda, Kenya, Uganda, and Tanzania.
+Built for compliance officers, bank legal teams, and financial regulators across Rwanda, Kenya, Uganda, Burundi, DRC, Somalia, South Sudan and Tanzania.
 
 ---
 
@@ -22,12 +22,16 @@ Every answer is cited. No guessing. No manual PDF search.
 
 ## Coverage
 
-| Jurisdiction | Central Bank                  | Status                |
-| ------------ | ----------------------------- | --------------------  |
-| Rwanda       | National Bank of Rwanda (BNR) | Live - 19+ directives |
-| Kenya        | Central Bank of Kenya (CBK)   | Coming soon           |
-| Uganda       | Bank of Uganda (BOU)          | Coming soon           |
-| Tanzania     | Bank of Tanzania (BOT)        | Coming soon           |
+| Jurisdiction | Central Bank                             | Status                |
+| ------------ | -----------------------------------------| --------------------  |
+| Rwanda       | National Bank of Rwanda (BNR)            | Live - 19+ directives |
+| Kenya        | Kenya Central Bank (CBK)                 | Coming soon           |
+| Uganda       | Central Bank of Uganda (BOU)             | Coming soon           |
+| Burundi      | Banque de la République du Burundi (BRB) | Coming soon           |
+| DRC          | Banque Centrale du Congo (BCC)           | Coming soon           |
+| Somalia      | Central Bank of Somalia (CBS)            | Coming soon           |
+| South Sudan  | Bank of South Sudan (BSS)                | Coming soon           |
+| Tanzania     | Bank of Tanzania (BOT)                   | Coming soon           |
 
 The architecture is jurisdiction-agnostic. Adding a new country means ingesting its directive corpus - the retrieval and generation pipeline requires no changes.
 
@@ -61,8 +65,12 @@ Python · FastAPI · LangChain · ChromaDB · OpenAI · Chrome Extensions Manife
 
 - Kenya CBK circular corpus ingestion
 - Burundi BRB circular corpus ingestion
-- Uganda BOU directive corpus
-- Multi-language query support (French, Kinyarwanda, Swahili)
+- Uganda BOU directive corpus ingestion
+- Tanzania BOT directive corpus ingestion
+- Somalia  CBS directive corpus ingestion
+- DRC BCC directive corpus ingestion
+- South Sudan BSS directive corpus ingestion
+- Multi-language query support (French, Kinyarwanda, Swahili, Lingala)
 
 ---
 
