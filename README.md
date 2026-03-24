@@ -1,76 +1,90 @@
 # RegIQ
 
-**Regulatory IQ, grounded in official circulars/directives.**
+**Regulatory intelligence for East African financial institutions.**
 
-RegIQ transforms central bank circular and directive texts into clear, usable answers. Ask a compliance question in plain language and receive a precise response with the exact source, directive number, article, and page.
+RegIQ turns central bank directives and circulars into precise, cited answers. Ask a compliance question and receive a response with the exact directive number, article, and page; the same level of precision a senior compliance counsel would provide, in seconds.
 
-Built for compliance officers, bank legal teams, and financial regulators across Rwanda, Kenya, Uganda, Burundi, DRC, Somalia, South Sudan and Tanzania.
+Built for compliance officers, bank legal teams, internal audit teams, and financial regulators across East and Central Africa.
 
 ---
 
 ## What it does
 
-A compliance officer types: _"What's the penalty for late data submission?"_
+> _"What's the penalty for late data submission?"_
 
-RegIQ responds:
+**RegIQ responds:**
 
-> Under Directive No. 2500/2018, Article 21 - banks face **500,000 FRW** for non-submission plus **50,000 FRW per day** of delay. Insurance brokers, MFIs, e-money issuers, and other supervised institutions face 100,000 FRW base penalty plus 10,000 FRW/day.
+> Under Directive No. 2500/2018, Article 21 - banks face **500,000 FRW** for non-submission plus **50,000 FRW per day** of delay. MFIs, e-money issuers, insurance brokers, and other supervised institutions face 100,000 FRW base penalty plus 10,000 FRW/day.
 
-Every answer is cited. No guessing. No manual PDF search.
+Every answer is cited. Every citation is traceable to its source article and page.
 
 ---
 
 ## Coverage
 
 | Jurisdiction | Central Bank                             | Status                |
-| ------------ | -----------------------------------------| --------------------  |
+| ------------ | ---------------------------------------- | --------------------- |
 | Rwanda       | National Bank of Rwanda (BNR)            | Live - 19+ directives |
-| Kenya        | Kenya Central Bank (CBK)                 | Coming soon           |
-| Uganda       | Central Bank of Uganda (BOU)             | Coming soon           |
+| Kenya        | Central Bank of Kenya (CBK)              | Coming soon           |
+| Uganda       | Bank of Uganda (BOU)                     | Coming soon           |
 | Burundi      | Banque de la République du Burundi (BRB) | Coming soon           |
 | DRC          | Banque Centrale du Congo (BCC)           | Coming soon           |
 | Somalia      | Central Bank of Somalia (CBS)            | Coming soon           |
 | South Sudan  | Bank of South Sudan (BSS)                | Coming soon           |
 | Tanzania     | Bank of Tanzania (BOT)                   | Coming soon           |
 
-The architecture is jurisdiction-agnostic. Adding a new country means ingesting its directive corpus - the retrieval and generation pipeline requires no changes.
+The architecture is jurisdiction-agnostic. Adding a new country requires only ingesting its directive corpus - the retrieval and generation pipeline is unchanged.
 
 ---
 
 ## Architecture
 
 ```
-Central bank PDFs → OCR → Article-level chunking
-→ OpenAI embeddings → ChromaDB vector store
-→ FastAPI streaming backend → Chrome Extension side panel
+Central bank PDFs
+  → OCR pipeline (scanned document handling)
+  → Article-level chunking with full metadata
+  → Vector embeddings
+  → ChromaDB retrieval
+  → GPT-4o-mini generation with citation enforcement
+  → FastAPI streaming backend
+  → Chrome Extension side panel
 ```
 
-**Ingestion** - Each directive is parsed into article-level chunks with metadata: directive number, article number, article title, chapter, and page. Scanned PDFs (common across African central banks) are handled via OCR with table extraction preserved.
+**Ingestion** processes each directive into article-level chunks carrying directive number, article number, article title, chapter, and page as metadata. Scanned PDFs, common across African central bank websites are handled automatically with table extraction preserved.
 
-**Retrieval** - Maximum Marginal Relevance (MMR) retrieval selects diverse, non-redundant chunks across the corpus. Top 6 chunks per query.
+**Retrieval** uses Maximum Marginal Relevance to surface diverse, non-redundant chunks across the full corpus.
 
-**Generation** - GPT-4o-mini with a strict citation prompt. Every answer cites directive number, article, and specific requirements. Hallucination of regulatory numbers is structurally prevented.
+**Generation** enforces citation on every response. Directive numbers, article references, FRW amounts, and template codes are structurally protected from fabrication.
 
-**Delivery** - FastAPI streaming backend with Server-Sent Events. Chrome Extension side panel with jurisdiction switching, citation chips, and source preview.
+**Delivery** streams token-by-token via server-Sent Events to a Chrome side panel with jurisdiction switching, citation chips, and source drawer.
+
+**Multilingual** responds in the language of the question. English, French, Kinyarwanda, Swahili, Lingala, Kirundi supported. Technical codes and directive references are preserved in original form across all languages.
 
 ---
 
 ## Stack
 
-Python · FastAPI · LangChain · ChromaDB · OpenAI · Chrome Extensions Manifest V3
+Python 3.11 · FastAPI · LangChain · ChromaDB · OpenAI · Docker · Chrome Extensions Manifest V3
+
+---
+
+## Docker
+
+```bash
+docker pull monfortbrian/regiq-api:latest
+```
+
+API image: [hub.docker.com/r/monfortbrian/regiq-api](https://hub.docker.com/r/monfortbrian/regiq-api)
 
 ---
 
 ## Roadmap
 
-- Kenya CBK circular corpus ingestion
-- Burundi BRB circular corpus ingestion
-- Uganda BOU directive corpus ingestion
-- Tanzania BOT directive corpus ingestion
-- Somalia  CBS directive corpus ingestion
-- DRC BCC directive corpus ingestion
-- South Sudan BSS directive corpus ingestion
-- Multi-language query support (French, Kinyarwanda, Swahili, Lingala)
+- Kenya CBK corpus ingestion
+- Uganda BOU corpus ingestion
+- Burundi BRB corpus ingestion (French)
+- DRC BCC corpus ingestion (French)
+- Compliance gap checker - upload a bank policy, get a gap report against BNR directives
 
 ---
 
